@@ -1,23 +1,35 @@
 .container {
     max-width: 120rem; //1200px approx
     margin: 8rem auto;
-    background-color: var(--color-grey-light);
+    background-color: var(--color-grey-light-2);
     box-shadow: 0 2rem 6rem rgba(0,0,0,.3);
     min-height: 56rem
 }
 
 .header {
-
+    font-size:1.4rem;
+    height: 7rem;
+    background-color: #fff;
+    border-bottom: var(--color-grey-dark-1);
+    //flex container
+    display:flex;
+    justify-content: space-between; //evenly spread out
+    align-items: center;//align center along cross access (vertically)
 }
 
-.content {
-
+.content { //flex container
+    display:flex;
 }
 
-.sidebar {
-
+.sidebar { //flex item
+    background-color: var(--color-grey-dark-1);
+    flex: 0 0 18%;
+        //flex grow, flex shrink, flex basis(size)
+    
 }
 
-.hotel-view{
-
+.hotel-view { //flex item
+    background-color: #fff;
+    flex: 1;
+    //element should grow to fit the rest of the space
 }
