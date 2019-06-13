@@ -2,23 +2,41 @@
     max-width: 120rem; //1200px approx
     margin: 8rem auto;
     background-color: var(--color-grey-light-2);
-    box-shadow: 0 2rem 6rem rgba(0,0,0,.3);
-    min-height: 56rem
+    box-shadow: var(--shadow-dark);
+    min-height: 56rem;
+
+    @media only screen and (max-width: $bp-largest) {
+        margin:0;
+        width:100%;
+        max-width: 100%;
+    }
+    
 }
 
 .header {
     font-size:1.4rem;
     height: 7rem;
     background-color: #fff;
-    border-bottom: 1px solid var(--color-grey-light-2);
+    border-bottom: var(--line);
     //flex container
     display:flex;
     justify-content: space-between; //evenly spread out
     align-items: center;//align center along cross access (vertically)
+    
+    @media only screen and (max-width: $bp-medium) {
+        flex-wrap: wrap;
+        height:12rem;
+        align-content: space-around;
+    }
 }
 
 .content { //flex container
     display:flex;
+
+    
+    @media only screen and (max-width: $bp-medium) {
+        flex-direction: column;
+    }
 }
 
 .sidebar { //flex item
@@ -31,6 +49,7 @@
         // change from left -> right to top -> bottom
     justify-content: space-between;
         //used to push copyright text to bottom ( spreads out the flex items )
+    
 }
 
 .hotel-view { //flex item
@@ -40,5 +59,47 @@
 
     //REMOVE THIS IS FOR TESTING
     //background-color: orangered;
-    height:80rem;
+    //height:80rem;
+}
+
+.detail {
+    font-size:1.4rem;
+    display:flex;
+    padding:4.5rem;
+    background-color: var(--color-grey-light-1);
+    border-bottom: var(--line);
+
+    @media only screen and (max-width: $bp-medium) {
+        padding:3rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        flex-direction: column;
+    }
+}
+
+.description {
+    background-color: #fff;
+    flex:0 0 60%; //dont grow, dont shrink, fill 60%
+    margin-right:4.5rem;
+    padding: 3rem;
+    box-shadow: var(--shadow-light);
+
+    @media only screen and (max-width: $bp-medium) {
+        padding:2rem;
+        margin-right:3rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        margin-right:0;
+        margin-bottom: 3rem;
+    }
+}
+
+.user-reviews {
+    flex:1;//fill rest of space
+
+    display:flex;
+    flex-direction: column;
+    align-items: center;
 }
