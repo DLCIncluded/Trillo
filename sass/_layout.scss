@@ -25,11 +25,20 @@
     background-color: var(--color-grey-dark-1);
     flex: 0 0 18%;
         //flex grow, flex shrink, flex basis(size)
-    
+
+    display:flex;
+    flex-direction: column;
+        // change from left -> right to top -> bottom
+    justify-content: space-between;
+        //used to push copyright text to bottom ( spreads out the flex items )
 }
 
 .hotel-view { //flex item
     background-color: #fff;
     flex: 1;
     //element should grow to fit the rest of the space
+
+    //REMOVE THIS IS FOR TESTING
+    background-color: orangered;
+    height:80rem;
 }
